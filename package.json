@@ -1,0 +1,80 @@
+{
+  "name": "library-template",
+  "version": "1.0.0",
+  "module": "src/index.jsx",
+  "main": "dist/lib.js",
+  "exports": {
+    ".": {
+      "import": "./dist/lib.js"
+    },
+    "./index.css": {
+      "import": "./dist/style.css"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prolincur/library-template"
+  },
+  "bugs": {
+    "url": "https://github.com/prolincur/library-template/issues"
+  },
+  "homepage": "https://github.com/prolincur/library-template",
+  "author": "Prolincur Technologies <https://www.prolincur.com>",
+  "keywords": [
+    "react",
+    "antd",
+    "ui",
+    "form-build",
+    "ui-util",
+    "rapid=development",
+    "ant-design"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && yarn minify",
+    "prepublishOnly": "yarn build",
+    "minify": "terser --compress --mangle --output 'dist/lib.js' -- 'dist/lib.js'",
+    "start": "yarn install && yarn build && cd examples && yarn install && yarn start",
+    "lint": "eslint . --ext js,jsx",
+    "preview": "vite preview",
+    "prettier": "prettier . --write"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "three": "^0.157.0"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.22.3",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "glob": "^10.3.10",
+    "prettier": "^3.0.3",
+    "terser": "^5.28.1",
+    "vite": "^4.4.5",
+    "vite-plugin-babel-macros": "^1.0.6",
+    "vite-plugin-banner": "^0.7.1",
+    "vite-plugin-css-injected-by-js": "^3.3.0",
+    "vite-plugin-dts": "^3.6.0"
+  },
+  "dependencies": {}
+}
