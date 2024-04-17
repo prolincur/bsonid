@@ -108,6 +108,4 @@ function bsonId() {
   return BsonId.generateId()
 }
 
-getGlobal().bsonId = bsonId
-
 export { bsonId }
