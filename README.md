@@ -1,6 +1,6 @@
 # bsonid
 
-An utility on browser and node to create MonogoDB friendly object id.
+An utility on browser and node to create MonogoDB friendly object id based on current system time.
 
 [ObjectIds](https://www.mongodb.com/docs/manual/reference/bson-types/#objectid) in MongoDB are small, likely unique, fast to generate, and ordered. ObjectId values are 12 bytes in length, consisting of:
 
