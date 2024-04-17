@@ -1,13 +1,34 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
-import { Button } from 'library-template'
+import { bsonId } from 'bsonid'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <div className="App">
-      <Button>Click</Button>
-    </div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
+    <div className="App">{bsonId()}</div>
   </React.StrictMode>
 )

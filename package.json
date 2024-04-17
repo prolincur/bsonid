@@ -1,42 +1,34 @@
 {
-  "name": "library-template",
+  "name": "bsonid",
   "version": "1.0.0",
   "module": "src/index.jsx",
   "main": "dist/lib.js",
   "exports": {
     ".": {
       "import": "./dist/lib.js"
-    },
-    "./index.css": {
-      "import": "./dist/style.css"
     }
   },
   "files": [
     "dist"
   ],
-  "sideEffects": [
-    "**/*.css"
-  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/prolincur/library-template"
+    "url": "https://github.com/prolincur/bsonid"
   },
   "bugs": {
-    "url": "https://github.com/prolincur/library-template/issues"
+    "url": "https://github.com/prolincur/bsonid/issues"
   },
-  "homepage": "https://github.com/prolincur/library-template",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/prolincur/bsonid",
   "author": "Prolincur Technologies <https://www.prolincur.com>",
   "keywords": [
-    "react",
-    "antd",
-    "ui",
-    "form-build",
-    "ui-util",
-    "rapid=development",
-    "ant-design"
+    "bson",
+    "bson-parser",
+    "uuid",
+    "id",
+    "objectid"
   ],
   "scripts": {
-    "dev": "vite",
     "build": "vite build && yarn minify",
     "prepublishOnly": "yarn build",
     "minify": "terser --compress --mangle --output 'dist/lib.js' -- 'dist/lib.js'",
@@ -45,13 +37,7 @@
     "preview": "vite preview",
     "prettier": "prettier . --write"
   },
-  "peerDependencies": {
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "three": "^0.157.0"
-  },
+  "peerDependencies": {},
   "devDependencies": {
     "@babel/preset-react": "^7.22.3",
     "@types/react": "^18.2.15",
