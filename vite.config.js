@@ -5,7 +5,6 @@
  */
 
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 import macrosPlugin from 'vite-plugin-babel-macros'
 import dts from 'vite-plugin-dts'
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
@@ -15,7 +14,6 @@ import json from './package.json'
 
 export default defineConfig({
   plugins: [
-    react(),
     macrosPlugin(),
     dts({ include: ['src'] }),
     cssInjectedByJsPlugin(),
@@ -42,7 +40,7 @@ export default defineConfig({
     sourcemap: false,
     minify: 'terser',
     rollupOptions: {
-      external: ['react/jsx-runtime', ...(Object.keys(json.peerDependencies) || [])],
+      external: [...(Object.keys(json.peerDependencies) || [])],
       input: {
         lib: './src/index.jsx',
       },
