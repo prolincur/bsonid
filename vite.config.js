@@ -19,9 +19,6 @@ export default defineConfig({
     cssInjectedByJsPlugin(),
     banner(
       'Copyright (c) 2020-24 Prolincur Technologies LLP.\nAll Rights Reserved.\n\n' +
-        'This file is NOT for redistribution, its part of larger software provided by Prolincur.\n' +
-        'The Terms of Service of consuming Prolincur software is located at:\n\n' +
-        '       https://www.prolincur.com/policies/terms/ \n\n' +
         'THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,\n' +
         'INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR\n' +
         'PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\n' +
