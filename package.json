@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/prolincur/bsonid/issues"
   },
-  "license": "Apache-2.0",
+  "license": "MIT",
   "homepage": "https://github.com/prolincur/bsonid",
   "author": "Prolincur Technologies <https://www.prolincur.com>",
   "keywords": [
