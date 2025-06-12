@@ -1,13 +1,15 @@
 {
   "name": "bsonid",
   "version": "1.0.0",
-  "module": "src/index.jsx",
-  "main": "dist/lib.js",
+  "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/lib.js"
+      "import": "./dist/lib.es.js",
+      "require": "./dist/lib.cjs.js"
     }
   },
+  "main": "./dist/lib.cjs.js",
+  "module": "./dist/lib.es.js",
   "files": [
     "dist"
   ],
@@ -31,7 +33,7 @@
   "scripts": {
     "build": "vite build && yarn minify",
     "prepublishOnly": "yarn build",
-    "minify": "terser --compress --mangle --output 'dist/lib.js' -- 'dist/lib.js'",
+    "minify": "terser --compress --mangle --output 'dist/lib.es.js' -- 'dist/lib.es.js'",
     "start": "yarn install && yarn build && cd examples && yarn install && yarn start",
     "preview": "vite preview",
     "prettier": "prettier . --write"

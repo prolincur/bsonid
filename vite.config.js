@@ -20,7 +20,7 @@ export default defineConfig({
     banner(
       `MIT License
 
-Copyright (c) 2020-24 Prolincur Technologies LLP.
+Copyright (c) 2020-25 Prolincur Technologies LLP.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -43,8 +43,7 @@ SOFTWARE.\n`
   ],
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/index.jsx'),
-      formats: ['es'],
+      entry: resolve(__dirname, 'src/index.js'),
     },
     copyPublicDir: false,
     cssCodeSplit: false,
@@ -53,12 +52,25 @@ SOFTWARE.\n`
     rollupOptions: {
       external: [...(Object.keys(json.peerDependencies) || [])],
       input: {
-        lib: './src/index.jsx',
+        lib: './src/index.js',
       },
-      output: {
-        assetFileNames: 'assets/[name][extname]',
-        entryFileNames: '[name].js',
-      },
+      output: [
+        {
+          format: 'es',
+          entryFileNames: '[name].[format].js',
+          globals: {},
+        },
+        {
+          format: 'cjs',
+          entryFileNames: '[name].[format].js',
+        },
+        {
+          format: 'umd',
+          name: 'bsonid',
+          entryFileNames: '[name].umd.js',
+        },
+      ],
     },
+    target: 'modules', // target modern browsers and Node.js
   },
 })
